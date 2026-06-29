@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Dashboard Executivo - Status de Projeto</title>
-    <!-- FontAwesome para Ícones Premium -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -48,7 +46,7 @@
             color: var(--texto-p);
             padding: 12px;
             line-height: 1.5;
-            font-size: 14px; /* Mínimo 14px para leitura móvel confortável sem zoom */
+            font-size: 14px;
             max-width: 100%;
             overflow-x: hidden;
         }
@@ -220,7 +218,7 @@
             color: var(--texto-p);
         }
 
-        /* --- GRID DE KPIS (UMA COLUNA POR PADRÃO NO CELULAR) --- */
+        /* --- GRID DE KPIS --- */
         .kpi-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -280,7 +278,7 @@
         .kpi-red { border-top: 4px solid var(--status-erro); }
         .kpi-red .kpi-icon { background: var(--status-erro-bg); color: var(--status-erro); }
 
-        /* --- SEÇÃO PRÓXIMA AÇÃO CRÍTICA (ALTA VISIBILIDADE NO TOPO NO MÓVEL) --- */
+        /* --- PRÓXIMA AÇÃO CRÍTICA --- */
         .next-steps-list {
             display: flex;
             flex-direction: column;
@@ -323,7 +321,7 @@
             color: var(--texto-s);
         }
 
-        /* --- PROGRESSO PRINCIPAL E VOLUMETRIA (100% LARGURA NO MÓVEL) --- */
+        /* --- PROGRESSO PRINCIPAL E VOLUMETRIA --- */
         .overview-section {
             display: flex;
             flex-direction: column;
@@ -462,7 +460,7 @@
             flex-shrink: 0;
         }
 
-        /* --- TIMELINE DE PROJETO (VERTICAL POR PADRÃO NO CELULAR) --- */
+        /* --- TIMELINE DE PROJETO --- */
         .timeline-card {
             width: 100%;
         }
@@ -475,7 +473,6 @@
             padding: 10px 0 10px 16px;
         }
 
-        /* Linha Vertical da Guia */
         .timeline-scroll::before {
             content: '';
             position: absolute;
@@ -545,7 +542,7 @@
         .timeline-item.complete .timeline-status { color: var(--status-sucesso); font-weight: 500; }
         .timeline-item.current .timeline-status { color: var(--azul-brand); font-weight: 600; }
 
-        /* --- TABELAS RESPONSIVAS TRANSFORMADAS EM CARDS NO MOBILE --- */
+        /* --- TABELAS RESPONSIVAS --- */
         .tables-grid {
             display: flex;
             flex-direction: column;
@@ -563,7 +560,7 @@
         }
 
         thead {
-            display: none; /* Esconde cabeçalhos tabulares no celular */
+            display: none;
         }
 
         tr {
@@ -596,7 +593,6 @@
             padding-top: 0;
         }
 
-        /* Injeta rótulos dinâmicos via Atributo Data-Label */
         td::before {
             content: attr(data-label);
             font-weight: 600;
@@ -607,7 +603,6 @@
             flex-shrink: 0;
         }
 
-        /* Alinhamento de conteúdo interno nos cards adaptados */
         td > span, td > b, td > text {
             text-align: right;
             word-break: break-word;
@@ -646,83 +641,23 @@
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         @keyframes slideUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* --- BREAKPOINT TABLET (MEDIAS ADAPTAÇÕES ADICIONAIS) --- */
         @media (min-width: 768px) {
-            body {
-                padding: 18px;
-            }
-            
-            .kpi-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 16px;
-            }
-            
-            .battery-wrapper {
-                flex-direction: row;
-                text-align: left;
-                padding: 20px;
-            }
-            
-            .legend-container {
-                grid-template-columns: repeat(2, 1fr);
-                display: grid;
-            }
+            body { padding: 18px; }
+            .kpi-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .battery-wrapper { flex-direction: row; text-align: left; padding: 20px; }
+            .legend-container { grid-template-columns: repeat(2, 1fr); display: grid; }
         }
 
-        /* --- BREAKPOINT DESKTOP (ADAPTAÇÃO ULTRA PREMIUM) --- */
         @media (min-width: 1024px) {
-            body {
-                padding: 24px;
-            }
-
-            .dashboard-container {
-                gap: 24px;
-            }
-
-            .header-card {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                padding: 24px;
-            }
-
-            .header-meta {
-                flex-direction: row;
-                align-items: center;
-                gap: 24px;
-                width: auto;
-                border-top: none;
-                padding-top: 0;
-            }
-
-            .meta-item {
-                flex-direction: column;
-                align-items: flex-end;
-                width: auto;
-            }
-
-            .semaforo-box {
-                width: auto;
-                gap: 16px;
-                padding: 8px 16px;
-            }
-
-            .kpi-grid {
-                grid-template-columns: repeat(5, 1fr);
-            }
-
-            .overview-section {
-                grid-template-columns: 2fr 1fr;
-                display: grid;
-            }
-
-            /* Retorna as Tabelas para o Formato Horizontal Clássico */
-            .tables-grid {
-                grid-template-columns: 1fr 1fr;
-                display: grid;
-                gap: 24px;
-            }
-
+            body { padding: 24px; }
+            .dashboard-container { gap: 24px; }
+            .header-card { flex-direction: row; justify-content: space-between; align-items: center; padding: 24px; }
+            .header-meta { flex-direction: row; align-items: center; gap: 24px; width: auto; border-top: none; padding-top: 0; }
+            .meta-item { flex-direction: column; align-items: flex-end; width: auto; }
+            .semaforo-box { width: auto; gap: 16px; padding: 8px 16px; }
+            .kpi-grid { grid-template-columns: repeat(5, 1fr); }
+            .overview-section { grid-template-columns: 2fr 1fr; display: grid; }
+            .tables-grid { grid-template-columns: 1fr 1fr; display: grid; gap: 24px; }
             table { display: table; }
             thead { display: table-header-group; }
             tbody { display: table-row-group; }
@@ -731,42 +666,11 @@
             tr:last-child td { border-bottom: none; }
             td::before { display: none; }
             td > span, td > b, td > text { text-align: left; }
-
-            /* Retorna a Timeline para o Formato Horizontal de Linha */
-            .timeline-scroll {
-                flex-direction: row;
-                justify-content: space-between;
-                padding: 24px 10px;
-            }
-
-            .timeline-scroll::before {
-                top: 40px;
-                left: 5%;
-                right: 5%;
-                height: 4px;
-                width: auto;
-                bottom: auto;
-            }
-
-            .timeline-item {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                flex: 1;
-                gap: 0;
-            }
-
-            .timeline-icon {
-                width: 34px;
-                height: 34px;
-                font-size: 12px;
-                border: 4px solid var(--bg-card);
-                margin-bottom: 8px;
-            }
-
-            .timeline-text-wrapper {
-                align-items: center;
-            }
+            .timeline-scroll { flex-direction: row; justify-content: space-between; padding: 24px 10px; }
+            .timeline-scroll::before { top: 40px; left: 5%; right: 5%; height: 4px; width: auto; bottom: auto; }
+            .timeline-item { flex-direction: column; align-items: center; text-align: center; flex: 1; gap: 0; }
+            .timeline-icon { width: 34px; height: 34px; font-size: 12px; border: 4px solid var(--bg-card); margin-bottom: 8px; }
+            .timeline-text-wrapper { align-items: center; }
         }
     </style>
 </head>
@@ -774,7 +678,6 @@
 
     <div class="dashboard-container">
         
-        <!-- CABEÇALHO (SAÚDE DO PROJETO NO TOPO) -->
         <header class="header-card">
             <div class="header-main-info">
                 <img src="logo.png" alt="Simus ERP" class="header-logo">
@@ -786,13 +689,12 @@
             <div class="header-meta">
                 <div class="meta-item">
                     <span class="label">Data do Relatório</span>
-                    <span class="value">25 de Junho de 2026</span>
+                    <span class="value">29 de Junho de 2026</span>
                 </div>
                 <div class="meta-item">
                     <span class="label">Status Geral</span>
                     <span class="value" style="color: var(--status-alerta);"><i class="fa-solid fa-circle-dot"></i> Em andamento</span>
                 </div>
-                <!-- Semáforo Executivo Premium -->
                 <div class="semaforo-box">
                     <img src="logo.png" alt="Health Indicator" class="health-logo-indicator" id="health-logo">
                     <div class="semaforo-lights-wrapper">
@@ -805,7 +707,6 @@
             </div>
         </header>
 
-        <!-- CARDS KPI (RESPONSIVIDADE INDIVIDUAL EM UMA COLUNA NO SMARTPHONE) -->
         <section class="kpi-grid">
             <div class="kpi-card kpi-blue">
                 <div class="kpi-data">
@@ -817,7 +718,7 @@
             <div class="kpi-card kpi-green">
                 <div class="kpi-data">
                     <span class="kpi-label">Atividades Concluídas</span>
-                    <div class="kpi-value">6</div>
+                    <div class="kpi-value">10</div>
                 </div>
                 <div class="kpi-icon"><i class="fa-solid fa-circle-check"></i></div>
             </div>
@@ -831,7 +732,7 @@
             <div class="kpi-card kpi-orange">
                 <div class="kpi-data">
                     <span class="kpi-label">Pendências Críticas</span>
-                    <div class="kpi-value">2</div>
+                    <div class="kpi-value">3</div>
                 </div>
                 <div class="kpi-icon"><i class="fa-solid fa-clock-history"></i></div>
             </div>
@@ -844,40 +745,38 @@
             </div>
         </section>
 
-        <!-- SEÇÃO PRÓXIMA AÇÃO CRÍTICA (LOCALIZAÇÃO ESTRATÉGICA PARA ACESSO VIA WHATSAPP) -->
         <section class="main-card">
             <div class="card-title"><i class="fa-solid fa-forward-step"></i> Próximas Etapas & Ações Críticas</div>
             <div class="next-steps-list">
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-text">
-                        <h5>Conclusão da Instalação do Banco de Dados</h5>
-                        <p>Previsão de encerramento do setup técnico básico, arquivos .INI e serviços de retaguarda nesta semana.</p>
+                        <h5>Acompanhamento de Importação de Disco Virtual</h5>
+                        <p>Aguardando conclusão da importação da imagem Linux personalizada do Econect enviada em 25/06 para a nuvem Skyone.</p>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">2</div>
                     <div class="step-text">
-                        <h5>Instalação do Concentrador E-conect</h5>
-                        <p>Homologação física e estruturação dos pacotes de comunicação assim que houver retorno da infra da Skyone.</p>
+                        <h5>Mapeamento de Usuários e Atalhos do AutoSky</h5>
+                        <p>Validação da imagem de usuário AutoSky com os acessos essenciais e verificação de suporte a Mac OS nas filiais.</p>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">3</div>
                     <div class="step-text">
-                        <h5>Execução da Ferramenta Simus Converter</h5>
-                        <p>Início dos mapeamentos físicos de dados estruturados e migração de tabelas legadas previsto para Julho/2026.</p>
+                        <h5>Agendamento da Implantação da Simplificação</h5>
+                        <p>Fase de integração agendada de forma primordial para execução conjunta em 30/06.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PROGRESSO PRINCIPAL, BATERIA & DETALHAMENTO -->
         <section class="overview-section">
             <div class="main-card">
                 <div class="card-title"><i class="fa-solid fa-align-left"></i> Resumo Executivo</div>
                 <p class="exec-summary-text">
-                    O projeto de implantação da rede Pão Dourado encontra-se em fase ativa de infraestrutura e preparação de base de dados, atingindo <strong>25.4% de progresso consolidado</strong>. Toda a etapa inicial de alinhamento estratégico, kick-offs e mapeamento de requisitos operacionais foi concluída com sucesso. Os esforços atuais do comitê técnico estão concentrados no provisionamento das imagens Linux, tratamento de dumps de dados e configuração de rede corporativa junto à Skyone, com previsão de término das estruturas básicas para esta semana.
+                    O projeto de implantação da rede Pão Dourado avançou significativamente nas frentes de infraestrutura básica, atingindo <strong>25.4% de progresso consolidado</strong>. A instalação corporativa do banco de dados no servidor foi totalmente concluída com sucesso em 24/06 e devidamente validada pelo DBA. Os esforços atuais estão focados no fechamento estratégico de túneis VPN e na homologação da imagem virtual do concentrador de vendas Econect junto ao ambiente Skyone.
                 </p>
                 <div style="margin-top: 20px;">
                     <div class="card-title"><i class="fa-solid fa-battery-three-quarters"></i> Progresso Executivo (Bateria)</div>
@@ -893,27 +792,25 @@
                 </div>
             </div>
 
-            <!-- Distribuição Volumétrica de Demandas -->
             <div class="main-card" style="display: flex; flex-direction: column; justify-content: space-between;">
                 <div class="card-title"><i class="fa-solid fa-pie-chart"></i> Volumetria da Esteira</div>
                 <div class="chart-container">
                     <div class="donut-chart" id="volumetria-chart">
                         <div class="donut-center-text">
-                            <span class="number">15</span>
+                            <span class="number">20</span>
                             <span class="label">Demandas</span>
                         </div>
                     </div>
                 </div>
                 <div class="legend-container" style="border-top: 1px solid var(--borda); padding-top: 12px;">
-                    <div class="legend-item"><span class="legend-color" style="background: var(--status-sucesso);"></span> Concluídas (6)</div>
+                    <div class="legend-item"><span class="legend-color" style="background: var(--status-sucesso);"></span> Concluídas (10)</div>
                     <div class="legend-item"><span class="legend-color" style="background: var(--azul-brand);"></span> Em Andamento (5)</div>
-                    <div class="legend-item"><span class="legend-color" style="background: var(--status-alerta);"></span> Pendências (2)</div>
+                    <div class="legend-item"><span class="legend-color" style="background: var(--status-alerta);"></span> Pendências (3)</div>
                     <div class="legend-item"><span class="legend-color" style="background: var(--status-erro);"></span> Riscos (2)</div>
                 </div>
             </div>
         </section>
 
-        <!-- TIMELINE MACRO (LINHA VERTICAL SE ADAPTANDO DINAMICAMENTE NO DISPOSITIVO MÓVEL) -->
         <section class="main-card timeline-card">
             <div class="card-title"><i class="fa-solid fa-route"></i> Timeline Macro do Projeto</div>
             <div class="timeline-scroll">
@@ -940,24 +837,18 @@
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-icon">4</div>
-                    <div class="timeline-text-wrapper">
-                        <div class="timeline-name">Parametrização</div>
-                        <div class="timeline-status">Agendado</div>
-                    </div>
+                    <div class="timeline-name">Parametrização</div>
+                    <div class="timeline-status">Agendado</div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-icon">5</div>
-                    <div class="timeline-text-wrapper">
-                        <div class="timeline-name">Testes</div>
-                        <div class="timeline-status">Não Iniciado</div>
-                    </div>
+                    <div class="timeline-name">Testes</div>
+                    <div class="timeline-status">Não Iniciado</div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-icon">6</div>
-                    <div class="timeline-text-wrapper">
-                        <div class="timeline-name">Treinamento</div>
-                        <div class="timeline-status">Não Iniciado</div>
-                    </div>
+                    <div class="timeline-name">Treinamento</div>
+                    <div class="timeline-status">Não Iniciado</div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-icon"><i class="fa-solid fa-flag-checkered"></i></div>
@@ -969,10 +860,8 @@
             </div>
         </section>
 
-        <!-- SEÇÃO DE DETALHAMENTO DE PROJETOS (COMPORTAMENTO CARD-STACKING NO SMARTPHONE) -->
         <section class="tables-grid">
             
-            <!-- Concluídas -->
             <div class="main-card">
                 <div class="card-title" style="color: var(--status-sucesso);"><i class="fa-solid fa-square-check"></i> Atividades Concluídas</div>
                 <div class="table-wrapper">
@@ -1001,17 +890,27 @@
                                 <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade"><b>Mapeamento Tributário e Coleta de Licenças Básicas</b></td>
-                                <td data-label="Data">16/06/2026</td>
+                                <td data-label="Atividade"><b>Instalação corporativa concluída do Banco de Dados</b></td>
+                                <td data-label="Data">24/06/2026</td>
                                 <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade"><b>Provisionamento de Infraestrutura Inicial na Nuvem</b></td>
-                                <td data-label="Data">17/06/2026</td>
+                                <td data-label="Atividade"><b>Validação de acesso ao banco de dados pelo DBA</b></td>
+                                <td data-label="Data">26/06/2026</td>
                                 <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade"><b>Cancelamento de Auditoria SPED</b> (Contabilidade utiliza software próprio via XML)</td>
+                                <td data-label="Atividade"><b>Geração de dump da base de dados vazia para redundância</b></td>
+                                <td data-label="Data">26/06/2026</td>
+                                <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Atividade"><b>Liberação de Disco Virtual SO Econect enviado p/ Nuvem</b></td>
+                                <td data-label="Data">25/06/2026</td>
+                                <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Atividade"><b>Cancelamento de Auditoria SPED</b> (Contabilidade utiliza XML)</td>
                                 <td data-label="Data">24/06/2026</td>
                                 <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
                             </tr>
@@ -1020,7 +919,6 @@
                 </div>
             </div>
 
-            <!-- Em Andamento -->
             <div class="main-card">
                 <div class="card-title" style="color: var(--azul-brand);"><i class="fa-solid fa-bars-progress"></i> Atividades em Andamento</div>
                 <div class="table-wrapper">
@@ -1034,36 +932,35 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-label="Atividade">Instalação corporativa e saneamento do Banco de Dados</td>
-                                <td data-label="Responsável">DBSI / Simus</td>
-                                <td data-label="Status"><span class="table-badge tb-doing">Execução</span></td>
+                                <td data-label="Atividade">Acompanhamento e importação de imagem de rede SO Econect</td>
+                                <td data-label="Responsável">Christian</td>
+                                <td data-label="Status"><span class="table-badge tb-doing">Aguardando</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade">Geração do ambiente Linux nativo para o E-conect</td>
+                                <td data-label="Atividade">Validar Acesso ao Servidor Frente Importado na Nuvem</td>
                                 <td data-label="Responsável">Christian</td>
                                 <td data-label="Status"><span class="table-badge tb-doing">Execução</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade">Alinhamento operacional de pacotes técnicos</td>
-                                <td data-label="Responsável">Christian / Clayton</td>
-                                <td data-label="Status"><span class="table-badge tb-doing">Alinhamento</span></td>
+                                <td data-label="Atividade">Geração de imagem de atalhos AutoSky (Superus e Explorer)</td>
+                                <td data-label="Responsável">Christian</td>
+                                <td data-label="Status"><span class="table-badge tb-doing">Validação</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade">Setup estrutural técnico (Superus, arquivos .INI e acessos)</td>
-                                <td data-label="Responsável">Infraestrutura Simus</td>
-                                <td data-label="Status"><span class="table-badge tb-doing">Parametrização</span></td>
+                                <td data-label="Atividade">Documentação técnica de acessos e FAQ de servidores no OTRS</td>
+                                <td data-label="Responsável">Christian</td>
+                                <td data-label="Status"><span class="table-badge tb-doing">Documentação</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade">Solicitação de alteração de ambiente em nuvem junto à Skyone</td>
-                                <td data-label="Responsável">Equipe Técnica</td>
-                                <td data-label="Status"><span class="table-badge tb-doing">Prazos</span></td>
+                                <td data-label="Atividade">Parametrização complementar e liberação de portas (211 e 8082)</td>
+                                <td data-label="Responsável">Christian / Cleyton</td>
+                                <td data-label="Status"><span class="table-badge tb-doing">Infraestrutura</span></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- Pendências -->
             <div class="main-card">
                 <div class="card-title" style="color: #f97316;"><i class="fa-solid fa-clock-with-calendar"></i> Pendências Cadastradas</div>
                 <div class="table-wrapper">
@@ -1077,21 +974,25 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-label="Pendência">Ajuste ambiental na Skyone para recebimento do concentrador E-conect</td>
+                                <td data-label="Pendência">Solicitação e monitoramento de espaço em disco corporativo (/dados)</td>
                                 <td data-label="Responsável">Skyone / Simus</td>
                                 <td><span class="table-badge tb-risk-med">Médio</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Pendência">Correção e saneamento de erros no dump antigo do cliente</td>
-                                <td data-label="Responsável">DBSI / Cliente</td>
-                                <td><span class="table-badge tb-risk-high">Crítico</span></td>
+                                <td data-label="Pendência">Configuração de Impressora de Rede Local Virtual Printer AutoSky</td>
+                                <td data-label="Responsável">Christian</td>
+                                <td><span class="table-badge tb-risk-med">Médio</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Pendência">Instalação e parametrização do módulo de Simplificação fiscal</td>
+                                <td data-label="Responsável">Christian / Fabio</td>
+                                <td><span class="table-badge tb-risk-high">Alto</span></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- Riscos -->
             <div class="main-card">
                 <div class="card-title" style="color: var(--status-erro);"><i class="fa-solid fa-triangle-exclamation"></i> Riscos Mapeados</div>
                 <div class="table-wrapper">
@@ -1105,14 +1006,14 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-label="Risco">Erros persistentes na restauração do dump físico de dados</td>
-                                <td data-label="Impacto"><span class="table-badge tb-risk-high">Alto</span></td>
-                                <td data-label="Mitigação">Abertura de chamado especializado com a DBSI e acionamento alternativo imediato.</td>
+                                <td data-label="Risco">Instabilização no fechamento dos 22 túneis VPN Nuvem x Lojas</td>
+                                <td data-label="Impacto"><span class="table-badge tb-risk-med">Médio</span></td>
+                                <td data-label="Mitigação">Planejamento focado de horários agendados entre pontas técnicas para homologação mútua.</td>
                             </tr>
                             <tr>
-                                <td data-label="Risco">Bloqueio de ISOs personalizadas do Linux na nuvem do parceiro</td>
-                                <td data-label="Impacto"><span class="table-badge tb-risk-med">Médio</span></td>
-                                <td data-label="Mitigação">Geração manual de imagem Linux estruturada e alinhamento dedicado de pacotes corporativos.</td>
+                                <td data-label="Risco">Atrasos potenciais na liberação da ISO do Econect pela nuvem parceira</td>
+                                <td data-label="Impacto"><span class="table-badge tb-risk-high">Alto</span></td>
+                                <td data-label="Mitigação">Mitigado com o provisionamento e envio prévio do disco virtual finalizado em 25/06.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1120,17 +1021,15 @@
             </div>
         </section>
 
-        <!-- RODAPÉ -->
         <footer>
             <p>Projeto acompanhado com governança sênior pela <strong>Simus ERP</strong> — Competência 2026</p>
         </footer>
 
     </div>
 
-    <!-- SCRIPT DE COMPORTAMENTO DINÂMICO -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Percentual de progresso extraído do relatório (25.4%)
+            // Novo percentual de progresso consolidado (25.4%)
             const progressoValor = 25.4;
             
             // 1. Atualizar a bateria de carregamento de forma dinâmica
@@ -1151,14 +1050,13 @@
                 if (progressoValor <= 30) {
                     batteryInner.style.backgroundColor = "var(--status-erro)";
                     batteryDesc.innerText = "Fase inicial de infraestrutura e saneamento de dados.";
-                    
                     yellowLight.classList.add("active");
                     healthLogo.classList.add("health-yellow");
                     healthLabel.innerText = "Saúde: Em Setup Inicial";
                     healthLabel.style.color = "var(--status-alerta)";
                 } else if (progressoValor > 30 && progressoValor <= 70) {
                     batteryInner.style.backgroundColor = "var(--status-alerta)";
-                    batteryDesc.innerText = "Fase intermediária de parametrização de sistemas.";
+                    batteryDesc.innerText = "Banco de dados e infraestrutura básica concluídos com sucesso.";
                     yellowLight.classList.add("active");
                     healthLogo.classList.add("health-yellow");
                     healthLabel.innerText = "Saúde: Estável";
@@ -1173,13 +1071,13 @@
                 }
             }, 200);
 
-            // 2. Montagem dinâmica do Donut Chart (Donut de conic-gradient customizado)
+            // 2. Montagem dinâmica do Donut Chart (Proporções baseadas nas 20 demandas mapeadas)
             const chart = document.getElementById("volumetria-chart");
             chart.style.background = `conic-gradient(
-                var(--status-sucesso) 0% 40%, 
-                var(--azul-brand) 40% 73.3%, 
-                var(--status-alerta) 73.3% 86.6%, 
-                var(--status-erro) 86.6% 100%
+                var(--status-sucesso) 0% 50%, 
+                var(--azul-brand) 50% 75%, 
+                var(--status-alerta) 75% 90%, 
+                var(--status-erro) 90% 100%
             )`;
         });
     </script>

@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Dashboard Executivo - Status de Projeto</title>
+    <!-- FontAwesome para Ícones Premium -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -46,7 +48,7 @@
             color: var(--texto-p);
             padding: 12px;
             line-height: 1.5;
-            font-size: 14px;
+            font-size: 14px; /* Mínimo 14px para leitura móvel confortável sem zoom */
             max-width: 100%;
             overflow-x: hidden;
         }
@@ -689,7 +691,7 @@
             <div class="header-meta">
                 <div class="meta-item">
                     <span class="label">Data do Relatório</span>
-                    <span class="value">29 de Junho de 2026</span>
+                    <span class="value">03 de Julho de 2026</span>
                 </div>
                 <div class="meta-item">
                     <span class="label">Status Geral</span>
@@ -711,28 +713,28 @@
             <div class="kpi-card kpi-blue">
                 <div class="kpi-data">
                     <span class="kpi-label">Progresso Realizado</span>
-                    <div class="kpi-value" id="kpi-progress">25.4%</div>
+                    <div class="kpi-value" id="kpi-progress">27.0%</div>
                 </div>
                 <div class="kpi-icon"><i class="fa-solid fa-chart-line"></i></div>
             </div>
             <div class="kpi-card kpi-green">
                 <div class="kpi-data">
                     <span class="kpi-label">Atividades Concluídas</span>
-                    <div class="kpi-value">10</div>
+                    <div class="kpi-value">13</div>
                 </div>
                 <div class="kpi-icon"><i class="fa-solid fa-circle-check"></i></div>
             </div>
             <div class="kpi-card kpi-amber">
                 <div class="kpi-data">
                     <span class="kpi-label">Em Andamento</span>
-                    <div class="kpi-value">5</div>
+                    <div class="kpi-value">1</div>
                 </div>
                 <div class="kpi-icon"><i class="fa-solid fa-spinner fa-spin-slow"></i></div>
             </div>
             <div class="kpi-card kpi-orange">
                 <div class="kpi-data">
                     <span class="kpi-label">Pendências Críticas</span>
-                    <div class="kpi-value">3</div>
+                    <div class="kpi-value">2</div>
                 </div>
                 <div class="kpi-icon"><i class="fa-solid fa-clock-history"></i></div>
             </div>
@@ -751,22 +753,22 @@
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-text">
-                        <h5>Acompanhamento de Importação de Disco Virtual</h5>
-                        <p>Aguardando conclusão da importação da imagem Linux personalizada do Econect enviada em 25/06 para a nuvem Skyone.</p>
+                        <h5>Validação de Planilhas de Carga de Dados</h5>
+                        <p>Planilhas de Clientes, Funcionários, Fornecedores e Transportadoras disponibilizadas no modelo Simus para validação do cliente.</p>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">2</div>
                     <div class="step-text">
-                        <h5>Mapeamento de Usuários e Atalhos do AutoSky</h5>
-                        <p>Validação da imagem de usuário AutoSky com os acessos essenciais e verificação de suporte a Mac OS nas filiais.</p>
+                        <h5>Confirmação de Cadastros de Funcionários</h5>
+                        <p>Aguardando retorno de Carlos para confirmação técnica das diretrizes e parametrização de inclusão de registros inativos.</p>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">3</div>
                     <div class="step-text">
-                        <h5>Agendamento da Implantação da Simplificação</h5>
-                        <p>Fase de integração agendada de forma primordial para execução conjunta em 30/06.</p>
+                        <h5>Mapeamento e Fechamento de Túneis VPN</h5>
+                        <p>Planejamento de horários agendados entre pontas técnicas para homologação dos 22 túneis VPN Nuvem x Lojas.</p>
                     </div>
                 </div>
             </div>
@@ -776,7 +778,7 @@
             <div class="main-card">
                 <div class="card-title"><i class="fa-solid fa-align-left"></i> Resumo Executivo</div>
                 <p class="exec-summary-text">
-                    O projeto de implantação da rede Pão Dourado avançou significativamente nas frentes de infraestrutura básica, atingindo <strong>25.4% de progresso consolidado</strong>. A instalação corporativa do banco de dados no servidor foi totalmente concluída com sucesso em 24/06 e devidamente validada pelo DBA. Os esforços atuais estão focados no fechamento estratégico de túneis VPN e na homologação da imagem virtual do concentrador de vendas Econect junto ao ambiente Skyone.
+                    O projeto de implantação da rede Pão Dourado atingiu <strong>27.0% de progresso consolidado</strong>. A fase de infraestrutura interna foi totalmente concluída, incluindo a instalação e saneamento do banco de dados corporativo, serviços e arquivos .INI. As frentes de preparação de rede com a Skyone (importação da ISO customizada do Linux do Econect) foram finalizadas com sucesso. O foco atual do projeto migrou para a validação das planilhas de carga de dados e saneamento das amarrações da grade fiscal legada.
                 </p>
                 <div style="margin-top: 20px;">
                     <div class="card-title"><i class="fa-solid fa-battery-three-quarters"></i> Progresso Executivo (Bateria)</div>
@@ -797,15 +799,15 @@
                 <div class="chart-container">
                     <div class="donut-chart" id="volumetria-chart">
                         <div class="donut-center-text">
-                            <span class="number">20</span>
+                            <span class="number">18</span>
                             <span class="label">Demandas</span>
                         </div>
                     </div>
                 </div>
                 <div class="legend-container" style="border-top: 1px solid var(--borda); padding-top: 12px;">
-                    <div class="legend-item"><span class="legend-color" style="background: var(--status-sucesso);"></span> Concluídas (10)</div>
-                    <div class="legend-item"><span class="legend-color" style="background: var(--azul-brand);"></span> Em Andamento (5)</div>
-                    <div class="legend-item"><span class="legend-color" style="background: var(--status-alerta);"></span> Pendências (3)</div>
+                    <div class="legend-item"><span class="legend-color" style="background: var(--status-sucesso);"></span> Concluídas (13)</div>
+                    <div class="legend-item"><span class="legend-color" style="background: var(--azul-brand);"></span> Em Andamento (1)</div>
+                    <div class="legend-item"><span class="legend-color" style="background: var(--status-alerta);"></span> Pendências (2)</div>
                     <div class="legend-item"><span class="legend-color" style="background: var(--status-erro);"></span> Riscos (2)</div>
                 </div>
             </div>
@@ -828,17 +830,19 @@
                         <div class="timeline-status">Concluído</div>
                     </div>
                 </div>
-                <div class="timeline-item current">
-                    <div class="timeline-icon">3</div>
+                <div class="timeline-item complete">
+                    <div class="timeline-icon"><i class="fa-solid fa-check"></i></div>
                     <div class="timeline-text-wrapper">
                         <div class="timeline-name">Infraestrutura</div>
-                        <div class="timeline-status">Em Execução</div>
+                        <div class="timeline-status">Concluído</div>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item current">
                     <div class="timeline-icon">4</div>
-                    <div class="timeline-name">Parametrização</div>
-                    <div class="timeline-status">Agendado</div>
+                    <div class="timeline-text-wrapper">
+                        <div class="timeline-name">Parametrização</div>
+                        <div class="timeline-status">Em Execução</div>
+                    </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-icon">5</div>
@@ -890,27 +894,52 @@
                                 <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade"><b>Instalação corporativa concluída do Banco de Dados</b></td>
+                                <td data-label="Atividade"><b>Instalação corporativa e saneamento do banco de dados (DBSI)</b></td>
                                 <td data-label="Data">24/06/2026</td>
                                 <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade"><b>Validação de acesso ao banco de dados pelo DBA</b></td>
+                                <td data-label="Atividade"><b>Geração da instalação do Linux para o concentrador E-conect</b></td>
                                 <td data-label="Data">26/06/2026</td>
                                 <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade"><b>Geração de dump da base de dados vazia para redundância</b></td>
+                                <td data-label="Atividade"><b>Liberação, envio e importação da imagem Linux (Skyone)</b></td>
                                 <td data-label="Data">26/06/2026</td>
                                 <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade"><b>Liberação de Disco Virtual SO Econect enviado p/ Nuvem</b></td>
-                                <td data-label="Data">25/06/2026</td>
+                                <td data-label="Atividade"><b>Setup de Infraestrutura de retaguarda (Superus, .INI, serviços, senhas)</b></td>
+                                <td data-label="Data">26/06/2026</td>
                                 <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade"><b>Cancelamento de Auditoria SPED</b> (Contabilidade utiliza XML)</td>
+                                <td data-label="Atividade"><b>Captura preliminar e processamento de dados do banco antigo</b></td>
+                                <td data-label="Data">26/06/2026</td>
+                                <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Atividade"><b>Saneamento inicial e encerramento da barreira de grade fiscal antiga</b></td>
+                                <td data-label="Data">26/06/2026</td>
+                                <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Atividade"><b>Geração de planilhas base (Clientes, Fornecedores, Transportadoras)</b></td>
+                                <td data-label="Data">03/07/2026</td>
+                                <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Atividade"><b>Geração de planilha base estruturada de Funcionários</b></td>
+                                <td data-label="Data">03/07/2026</td>
+                                <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Atividade"><b>Disponibilização do modelo de arquivos para validação do cliente</b></td>
+                                <td data-label="Data">03/07/2026</td>
+                                <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Atividade"><b>Cancelamento de Auditoria SPED</b> (Processo feito por fora via XML)</td>
                                 <td data-label="Data">24/06/2026</td>
                                 <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
                             </tr>
@@ -932,29 +961,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-label="Atividade">Acompanhamento e importação de imagem de rede SO Econect</td>
-                                <td data-label="Responsável">Christian</td>
-                                <td data-label="Status"><span class="table-badge tb-doing">Aguardando</span></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Atividade">Validar Acesso ao Servidor Frente Importado na Nuvem</td>
-                                <td data-label="Responsável">Christian</td>
-                                <td data-label="Status"><span class="table-badge tb-doing">Execução</span></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Atividade">Geração de imagem de atalhos AutoSky (Superus e Explorer)</td>
-                                <td data-label="Responsável">Christian</td>
+                                <td data-label="Atividade">Validação externa das planilhas de carga de dados do modelo Simus</td>
+                                <td data-label="Responsável">Cliente</td>
                                 <td data-label="Status"><span class="table-badge tb-doing">Validação</span></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Atividade">Documentação técnica de acessos e FAQ de servidores no OTRS</td>
-                                <td data-label="Responsável">Christian</td>
-                                <td data-label="Status"><span class="table-badge tb-doing">Documentação</span></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Atividade">Parametrização complementar e liberação de portas (211 e 8082)</td>
-                                <td data-label="Responsável">Christian / Cleyton</td>
-                                <td data-label="Status"><span class="table-badge tb-doing">Infraestrutura</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -974,17 +983,12 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-label="Pendência">Solicitação e monitoramento de espaço em disco corporativo (/dados)</td>
-                                <td data-label="Responsável">Skyone / Simus</td>
+                                <td data-label="Pendência">Confirmação de diretrizes sobre inclusão de registros inativos</td>
+                                <td data-label="Responsável">Carlos</td>
                                 <td><span class="table-badge tb-risk-med">Médio</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Pendência">Configuração de Impressora de Rede Local Virtual Printer AutoSky</td>
-                                <td data-label="Responsável">Christian</td>
-                                <td><span class="table-badge tb-risk-med">Médio</span></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Pendência">Instalação e parametrização do módulo de Simplificação fiscal</td>
+                                <td data-label="Pendência">Instalação e parametrização final do módulo de Simplificação fiscal</td>
                                 <td data-label="Responsável">Christian / Fabio</td>
                                 <td><span class="table-badge tb-risk-high">Alto</span></td>
                             </tr>
@@ -1006,14 +1010,14 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-label="Risco">Instabilização no fechamento dos 22 túneis VPN Nuvem x Lojas</td>
+                                <td data-label="Risco">Instabilização ou latência técnica nos 22 túneis VPN Nuvem x Lojas</td>
                                 <td data-label="Impacto"><span class="table-badge tb-risk-med">Médio</span></td>
-                                <td data-label="Mitigação">Planejamento focado de horários agendados entre pontas técnicas para homologação mútua.</td>
+                                <td data-label="Mitigação">Alinhamento estruturado de agendas e testes em blocos específicos com as filiais.</td>
                             </tr>
                             <tr>
-                                <td data-label="Risco">Atrasos potenciais na liberação da ISO do Econect pela nuvem parceira</td>
+                                <td data-label="Risco">Atrasos de homologação cadastral por inconsistência de dados do cliente</td>
                                 <td data-label="Impacto"><span class="table-badge tb-risk-high">Alto</span></td>
-                                <td data-label="Mitigação">Mitigado com o provisionamento e envio prévio do disco virtual finalizado em 25/06.</td>
+                                <td data-label="Mitigação">Disponibilização antecipada das planilhas em modelo limpo padrão da Simus ERP.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1029,10 +1033,8 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Novo percentual de progresso consolidado (25.4%)
-            const progressoValor = 25.4;
+            const progressoValor = 27.0;
             
-            // 1. Atualizar a bateria de carregamento de forma dinâmica
             const batteryInner = document.getElementById("main-battery-fill");
             const batteryText = document.getElementById("battery-percentage-text");
             const batteryDesc = document.getElementById("battery-status-desc");
@@ -1049,14 +1051,14 @@
                 
                 if (progressoValor <= 30) {
                     batteryInner.style.backgroundColor = "var(--status-erro)";
-                    batteryDesc.innerText = "Fase inicial de infraestrutura e saneamento de dados.";
+                    batteryDesc.innerText = "Fase de parametrização cadastral e validação de dados legados.";
                     yellowLight.classList.add("active");
                     healthLogo.classList.add("health-yellow");
-                    healthLabel.innerText = "Saúde: Em Setup Inicial";
+                    healthLabel.innerText = "Saúde: Estável (Migração)";
                     healthLabel.style.color = "var(--status-alerta)";
                 } else if (progressoValor > 30 && progressoValor <= 70) {
                     batteryInner.style.backgroundColor = "var(--status-alerta)";
-                    batteryDesc.innerText = "Banco de dados e infraestrutura básica concluídos com sucesso.";
+                    batteryDesc.innerText = "Fase intermediária de parametrização técnica do ERP.";
                     yellowLight.classList.add("active");
                     healthLogo.classList.add("health-yellow");
                     healthLabel.innerText = "Saúde: Estável";
@@ -1071,13 +1073,12 @@
                 }
             }, 200);
 
-            // 2. Montagem dinâmica do Donut Chart (Proporções baseadas nas 20 demandas mapeadas)
             const chart = document.getElementById("volumetria-chart");
             chart.style.background = `conic-gradient(
-                var(--status-sucesso) 0% 50%, 
-                var(--azul-brand) 50% 75%, 
-                var(--status-alerta) 75% 90%, 
-                var(--status-erro) 90% 100%
+                var(--status-sucesso) 0% 72.2%, 
+                var(--azul-brand) 72.2% 77.8%, 
+                var(--status-alerta) 77.8% 88.9%, 
+                var(--status-erro) 88.9% 100%
             )`;
         });
     </script>

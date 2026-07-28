@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Dashboard Executivo - Status de Projeto</title>
+    <title>Dashboard Executivo - Status de Projeto | Pão Dourado</title>
     <!-- FontAwesome para Ícones Premium -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
@@ -48,7 +48,7 @@
             color: var(--texto-p);
             padding: 12px;
             line-height: 1.5;
-            font-size: 14px; /* Mínimo 14px para leitura móvel confortável sem zoom */
+            font-size: 14px;
             max-width: 100%;
             overflow-x: hidden;
         }
@@ -104,7 +104,7 @@
             color: var(--azul-brand);
         }
 
-        /* --- CABEÇALHO (MÓVEL POR PADRÃO) --- */
+        /* --- CABEÇALHO --- */
         .header-card {
             background: var(--bg-card);
             border-radius: 12px;
@@ -685,13 +685,13 @@
                 <img src="logo.png" alt="Simus ERP" class="header-logo">
                 <div class="header-info">
                     <h1>Pão Dourado</h1>
-                    <p>Projeto: <strong>Implantação de Software ERP Superus</strong></p>
+                    <p>Projeto: <strong>Implantação ERP Superus (Container 3)</strong></p>
                 </div>
             </div>
             <div class="header-meta">
                 <div class="meta-item">
-                    <span class="label">Data do Relatório</span>
-                    <span class="value">03 de Julho de 2026</span>
+                    <span class="label">Previsão de Virada (Container 3)</span>
+                    <span class="value" style="color: var(--azul-brand);"><i class="fa-solid fa-flag-checkered"></i> 20/08/2026</span>
                 </div>
                 <div class="meta-item">
                     <span class="label">Status Geral</span>
@@ -713,28 +713,28 @@
             <div class="kpi-card kpi-blue">
                 <div class="kpi-data">
                     <span class="kpi-label">Progresso Realizado</span>
-                    <div class="kpi-value" id="kpi-progress">27.0%</div>
+                    <div class="kpi-value" id="kpi-progress">31.7%</div>
                 </div>
                 <div class="kpi-icon"><i class="fa-solid fa-chart-line"></i></div>
             </div>
             <div class="kpi-card kpi-green">
                 <div class="kpi-data">
                     <span class="kpi-label">Atividades Concluídas</span>
-                    <div class="kpi-value">13</div>
+                    <div class="kpi-value">124</div>
                 </div>
                 <div class="kpi-icon"><i class="fa-solid fa-circle-check"></i></div>
             </div>
             <div class="kpi-card kpi-amber">
                 <div class="kpi-data">
                     <span class="kpi-label">Em Andamento</span>
-                    <div class="kpi-value">1</div>
+                    <div class="kpi-value">10</div>
                 </div>
                 <div class="kpi-icon"><i class="fa-solid fa-spinner fa-spin-slow"></i></div>
             </div>
             <div class="kpi-card kpi-orange">
                 <div class="kpi-data">
                     <span class="kpi-label">Pendências Críticas</span>
-                    <div class="kpi-value">2</div>
+                    <div class="kpi-value">4</div>
                 </div>
                 <div class="kpi-icon"><i class="fa-solid fa-clock-history"></i></div>
             </div>
@@ -753,22 +753,22 @@
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-text">
-                        <h5>Validação de Planilhas de Carga de Dados</h5>
-                        <p>Planilhas de Clientes, Funcionários, Fornecedores e Transportadoras disponibilizadas no modelo Simus para validação do cliente.</p>
+                        <h5>Envio do Mix de Produtos da Loja Container 3</h5>
+                        <p>Aguardando o envio formal do mix de produtos pela cliente Elisangela para estruturação e carga de dados focada na nova loja.</p>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">2</div>
                     <div class="step-text">
-                        <h5>Confirmação de Cadastros de Funcionários</h5>
-                        <p>Aguardando retorno de Carlos para confirmação técnica das diretrizes e parametrização de inclusão de registros inativos.</p>
+                        <h5>Importação e Carga dos Produtos via Planilha</h5>
+                        <p>Execução da carga de dados via planilha assim que o mix for disponibilizado, garantindo a amarração fiscal correta.</p>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">3</div>
                     <div class="step-text">
-                        <h5>Mapeamento e Fechamento de Túneis VPN</h5>
-                        <p>Planejamento de horários agendados entre pontas técnicas para homologação dos 22 túneis VPN Nuvem x Lojas.</p>
+                        <h5>Alinhamento de Funcionários Inativos & Treinamentos</h5>
+                        <p>Confirmação com o Carlos quanto aos registros de funcionários inativos e agendamento dos treinamentos focados no Cadastro de Produtos.</p>
                     </div>
                 </div>
             </div>
@@ -776,9 +776,19 @@
 
         <section class="overview-section">
             <div class="main-card">
-                <div class="card-title"><i class="fa-solid fa-align-left"></i> Resumo Executivo</div>
+                <div class="card-title"><i class="fa-solid fa-align-left"></i> Resumo Executivo & Escopo de Virada</div>
                 <p class="exec-summary-text">
-                    O projeto de implantação da rede Pão Dourado atingiu <strong>27.0% de progresso consolidado</strong>. A fase de infraestrutura interna foi totalmente concluída, incluindo a instalação e saneamento do banco de dados corporativo, serviços e arquivos .INI. As frentes de preparação de rede com a Skyone (importação da ISO customizada do Linux do Econect) foram finalizadas com sucesso. O foco atual do projeto migrou para a validação das planilhas de carga de dados e saneamento das amarrações da grade fiscal legada.
+                    O projeto de implantação do <strong>Pão Dourado</strong> registra <strong>31.7% de progresso consolidado</strong>, com apoio técnico da autorizada Etitec.
+                    <br><br>
+                    <strong>Definição Estratégica do Go-Live:</strong>
+                    <br>
+                    • <strong>Escopo da Virada:</strong> Em alinhamento técnico com a Elisangela, ficou determinado que o Go-Live inicial ocorrerá na unidade <strong>Container 3</strong>. Trata-se de uma loja totalmente nova na rede, que não utiliza o software antigo.
+                    <br>
+                    • <strong>Estratégia de Carga de Dados:</strong> A importação de produtos e cadastros será realizada via dados de planilha, com o mix de produtos sendo fornecido diretamente pela Elisangela para alimentar esta nova unidade.
+                    <br>
+                    • <strong>Infraestrutura Interna (100% Concluída):</strong> Instalação física do banco de dados (DBSI), configuração de arquivos .INI, parametrização do Superus, serviços corporativos, senhas e geração do ambiente Linux para o E-conect (Skyone) totalmente finalizadas. A captura e o tratamento do banco legado pelo consultor Fábio também foram concluídos.
+                    <br>
+                    • <strong>Diretriz Fiscal:</strong> A validação técnica do arquivo SPED pela analista Fernanda foi cancelada em definitivo, visto que a contabilidade gera o documento por software próprio via importação direta de XMLs.
                 </p>
                 <div style="margin-top: 20px;">
                     <div class="card-title"><i class="fa-solid fa-battery-three-quarters"></i> Progresso Executivo (Bateria)</div>
@@ -799,15 +809,15 @@
                 <div class="chart-container">
                     <div class="donut-chart" id="volumetria-chart">
                         <div class="donut-center-text">
-                            <span class="number">18</span>
+                            <span class="number">140</span>
                             <span class="label">Demandas</span>
                         </div>
                     </div>
                 </div>
                 <div class="legend-container" style="border-top: 1px solid var(--borda); padding-top: 12px;">
-                    <div class="legend-item"><span class="legend-color" style="background: var(--status-sucesso);"></span> Concluídas (13)</div>
-                    <div class="legend-item"><span class="legend-color" style="background: var(--azul-brand);"></span> Em Andamento (1)</div>
-                    <div class="legend-item"><span class="legend-color" style="background: var(--status-alerta);"></span> Pendências (2)</div>
+                    <div class="legend-item"><span class="legend-color" style="background: var(--status-sucesso);"></span> Concluídas (124)</div>
+                    <div class="legend-item"><span class="legend-color" style="background: var(--azul-brand);"></span> Em Andamento (10)</div>
+                    <div class="legend-item"><span class="legend-color" style="background: var(--status-alerta);"></span> Pendências (4)</div>
                     <div class="legend-item"><span class="legend-color" style="background: var(--status-erro);"></span> Riscos (2)</div>
                 </div>
             </div>
@@ -819,46 +829,46 @@
                 <div class="timeline-item complete">
                     <div class="timeline-icon"><i class="fa-solid fa-check"></i></div>
                     <div class="timeline-text-wrapper">
-                        <div class="timeline-name">Kick-Off</div>
+                        <div class="timeline-name">Kick-Offs</div>
                         <div class="timeline-status">Concluído</div>
                     </div>
                 </div>
                 <div class="timeline-item complete">
                     <div class="timeline-icon"><i class="fa-solid fa-check"></i></div>
                     <div class="timeline-text-wrapper">
-                        <div class="timeline-name">Levantamento</div>
-                        <div class="timeline-status">Concluído</div>
+                        <div class="timeline-name">Infra & Banco</div>
+                        <div class="timeline-status">100% Finalizado</div>
                     </div>
                 </div>
                 <div class="timeline-item complete">
                     <div class="timeline-icon"><i class="fa-solid fa-check"></i></div>
                     <div class="timeline-text-wrapper">
-                        <div class="timeline-name">Infraestrutura</div>
-                        <div class="timeline-status">Concluído</div>
+                        <div class="timeline-name">Captura Banco Antigo</div>
+                        <div class="timeline-status">Concluído (Fábio)</div>
                     </div>
                 </div>
                 <div class="timeline-item current">
                     <div class="timeline-icon">4</div>
                     <div class="timeline-text-wrapper">
-                        <div class="timeline-name">Parametrização</div>
-                        <div class="timeline-status">Em Execução</div>
+                        <div class="timeline-name">Mix Container 3</div>
+                        <div class="timeline-status">Aguardando Cliente</div>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-icon">5</div>
-                    <div class="timeline-name">Testes</div>
-                    <div class="timeline-status">Não Iniciado</div>
+                    <div class="timeline-name">Carga Planilha</div>
+                    <div class="timeline-status">Pendente</div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-icon">6</div>
-                    <div class="timeline-name">Treinamento</div>
-                    <div class="timeline-status">Não Iniciado</div>
+                    <div class="timeline-name">Treinamentos</div>
+                    <div class="timeline-status">A Agendar</div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-icon"><i class="fa-solid fa-flag-checkered"></i></div>
                     <div class="timeline-text-wrapper">
-                        <div class="timeline-name">Go Live</div>
-                        <div class="timeline-status">Previsão: 01/08/26</div>
+                        <div class="timeline-name">Go Live Container 3</div>
+                        <div class="timeline-status">Previsão: 20/08/26</div>
                     </div>
                 </div>
             </div>
@@ -873,74 +883,49 @@
                         <thead>
                             <tr>
                                 <th>Mapeamento da Atividade</th>
-                                <th>Data</th>
+                                <th>Escopo / Detalhes</th>
                                 <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-label="Atividade"><b>Kick-Off Operacional realizado</b> (Skyone + Pão Dourado)</td>
-                                <td data-label="Data">11/06/2026</td>
+                                <td data-label="Atividade"><b>Kick-Off Skyone + Pão Dourado</b></td>
+                                <td data-label="Detalhes">Realizado em 11/06 às 15:00H</td>
                                 <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade"><b>Kick-Off Integrador efetuado</b> (Simus + Pão Dourado)</td>
-                                <td data-label="Data">12/06/2026</td>
+                                <td data-label="Atividade"><b>Kick-Off Simus + Pão Dourado</b></td>
+                                <td data-label="Detalhes">Realizado em 12/06 às 14:00H</td>
                                 <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade"><b>Reunião de Alinhamento e Levantamento de Requisitos</b></td>
-                                <td data-label="Data">16/06/2026</td>
+                                <td data-label="Atividade"><b>Reunião de Levantamento de Requisitos</b></td>
+                                <td data-label="Detalhes">Realizada em 16/06 com consultores Simus</td>
                                 <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade"><b>Instalação corporativa e saneamento do banco de dados (DBSI)</b></td>
-                                <td data-label="Data">24/06/2026</td>
+                                <td data-label="Atividade"><b>Instalação de Banco & Preparação de Dump</b></td>
+                                <td data-label="Detalhes">Instalação e tratamento concluídos pela DBSI</td>
                                 <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade"><b>Geração da instalação do Linux para o concentrador E-conect</b></td>
-                                <td data-label="Data">26/06/2026</td>
+                                <td data-label="Atividade"><b>Setup de Retaguarda & Serviços</b></td>
+                                <td data-label="Detalhes">Superus, arquivos .INI, senhas e portas configurados</td>
                                 <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade"><b>Liberação, envio e importação da imagem Linux (Skyone)</b></td>
-                                <td data-label="Data">26/06/2026</td>
+                                <td data-label="Atividade"><b>Ambiente Linux E-conect na Skyone</b></td>
+                                <td data-label="Detalhes">Desenvolvimento Christian e importação Clayton/Skyone</td>
                                 <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade"><b>Setup de Infraestrutura de retaguarda (Superus, .INI, serviços, senhas)</b></td>
-                                <td data-label="Data">26/06/2026</td>
+                                <td data-label="Atividade"><b>Captura e Tratamento de Dados Legados</b></td>
+                                <td data-label="Detalhes">Superadas as dificuldades de grade fiscal por Fábio</td>
                                 <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Atividade"><b>Captura preliminar e processamento de dados do banco antigo</b></td>
-                                <td data-label="Data">26/06/2026</td>
-                                <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Atividade"><b>Saneamento inicial e encerramento da barreira de grade fiscal antiga</b></td>
-                                <td data-label="Data">26/06/2026</td>
-                                <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Atividade"><b>Geração de planilhas base (Clientes, Fornecedores, Transportadoras)</b></td>
-                                <td data-label="Data">03/07/2026</td>
-                                <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Atividade"><b>Geração de planilha base estruturada de Funcionários</b></td>
-                                <td data-label="Data">03/07/2026</td>
-                                <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Atividade"><b>Disponibilização do modelo de arquivos para validação do cliente</b></td>
-                                <td data-label="Data">03/07/2026</td>
-                                <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Atividade"><b>Cancelamento de Auditoria SPED</b> (Processo feito por fora via XML)</td>
-                                <td data-label="Data">24/06/2026</td>
+                                <td data-label="Atividade"><b>Geração de Planilhas Base Cadastrais</b></td>
+                                <td data-label="Detalhes">Clientes, Funcionários, Fornecedores e Transportadoras</td>
                                 <td data-label="Status"><span class="table-badge tb-done">Concluído</span></td>
                             </tr>
                         </tbody>
@@ -961,9 +946,24 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-label="Atividade">Validação externa das planilhas de carga de dados do modelo Simus</td>
-                                <td data-label="Responsável">Cliente</td>
-                                <td data-label="Status"><span class="table-badge tb-doing">Validação</span></td>
+                                <td data-label="Atividade">Definição e envio do mix de produtos da loja Container 3</td>
+                                <td data-label="Responsável">Cliente (Elisangela)</td>
+                                <td data-label="Status"><span class="table-badge tb-doing">Aguardando</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Atividade">Confirmação sobre inclusão de funcionários inativos</td>
+                                <td data-label="Responsável">Carlos / Simus</td>
+                                <td data-label="Status"><span class="table-badge tb-doing">Em Análise</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Atividade">Validações de acesso e concentradores de loja para Frente</td>
+                                <td data-label="Responsável">Christian Canalli</td>
+                                <td data-label="Status"><span class="table-badge tb-doing">Em Progresso</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Atividade">Inclusão dos dados capturados e preparação da carga</td>
+                                <td data-label="Responsável">Fábio Durães</td>
+                                <td data-label="Status"><span class="table-badge tb-doing">Em Progresso</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -983,14 +983,24 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-label="Pendência">Confirmação de diretrizes sobre inclusão de registros inativos</td>
-                                <td data-label="Responsável">Carlos</td>
+                                <td data-label="Pendência">Recebimento do mix de produtos do Container 3 para montagem da carga</td>
+                                <td data-label="Responsável">Elisangela (Pão Dourado)</td>
+                                <td><span class="table-badge tb-risk-high">Alto</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Pendência">Validação e correção dos dados cadastrais exportados pelo cliente</td>
+                                <td data-label="Responsável">Elisangela (Pão Dourado)</td>
+                                <td><span class="table-badge tb-risk-high">Alto</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Pendência">Agendamento e execução dos treinamentos de Cadastro de Produtos</td>
+                                <td data-label="Responsável">Simus / Etitec</td>
                                 <td><span class="table-badge tb-risk-med">Médio</span></td>
                             </tr>
                             <tr>
-                                <td data-label="Pendência">Instalação e parametrização final do módulo de Simplificação fiscal</td>
-                                <td data-label="Responsável">Christian / Fabio</td>
-                                <td><span class="table-badge tb-risk-high">Alto</span></td>
+                                <td data-label="Pendência">Liberação dos módulos da ferramenta Simplificação</td>
+                                <td data-label="Responsável">Fábio / Christian</td>
+                                <td><span class="table-badge tb-risk-med">Médio</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -1010,14 +1020,14 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-label="Risco">Instabilização ou latência técnica nos 22 túneis VPN Nuvem x Lojas</td>
-                                <td data-label="Impacto"><span class="table-badge tb-risk-med">Médio</span></td>
-                                <td data-label="Mitigação">Alinhamento estruturado de agendas e testes em blocos específicos com as filiais.</td>
+                                <td data-label="Risco">Prazo estendido do cliente (estimado em até 30 dias) para validação cadastral geral</td>
+                                <td data-label="Impacto"><span class="table-badge tb-risk-high">Alto</span></td>
+                                <td data-label="Mitigação">Focar o Go-Live na unidade nova (Container 3) alimentando apenas o mix direto de produtos.</td>
                             </tr>
                             <tr>
-                                <td data-label="Risco">Atrasos de homologação cadastral por inconsistência de dados do cliente</td>
+                                <td data-label="Risco">Perda de integridade fiscal caso o cadastro de produtos seja feito 100% manual sem histórico</td>
                                 <td data-label="Impacto"><span class="table-badge tb-risk-high">Alto</span></td>
-                                <td data-label="Mitigação">Disponibilização antecipada das planilhas em modelo limpo padrão da Simus ERP.</td>
+                                <td data-label="Mitigação">Carga via planilha garantindo amarração de códigos e vinculação com figuras fiscais Superus.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1033,7 +1043,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const progressoValor = 27.0;
+            const progressoValor = 31.7;
             
             const batteryInner = document.getElementById("main-battery-fill");
             const batteryText = document.getElementById("battery-percentage-text");
@@ -1050,22 +1060,22 @@
                 const healthLogo = document.getElementById("health-logo");
                 
                 if (progressoValor <= 30) {
-                    batteryInner.style.backgroundColor = "var(--status-erro)";
-                    batteryDesc.innerText = "Fase de parametrização cadastral e validação de dados legados.";
-                    yellowLight.classList.add("active");
-                    healthLogo.classList.add("health-yellow");
-                    healthLabel.innerText = "Saúde: Estável (Migração)";
-                    healthLabel.style.color = "var(--status-alerta)";
-                } else if (progressoValor > 30 && progressoValor <= 70) {
                     batteryInner.style.backgroundColor = "var(--status-alerta)";
-                    batteryDesc.innerText = "Fase intermediária de parametrização técnica do ERP.";
+                    batteryDesc.innerText = "Fase de alinhamento e levantamento de requisitos.";
                     yellowLight.classList.add("active");
                     healthLogo.classList.add("health-yellow");
                     healthLabel.innerText = "Saúde: Estável";
                     healthLabel.style.color = "var(--status-alerta)";
+                } else if (progressoValor > 30 && progressoValor <= 70) {
+                    batteryInner.style.backgroundColor = "var(--status-alerta)";
+                    batteryDesc.innerText = "Infraestrutura 100% pronta. Foco no envio do mix de produtos e carga do Container 3.";
+                    yellowLight.classList.add("active");
+                    healthLogo.classList.add("health-yellow");
+                    healthLabel.innerText = "Saúde: Estável (Aguardando Mix de Produtos)";
+                    healthLabel.style.color = "var(--status-alerta)";
                 } else {
                     batteryInner.style.backgroundColor = "var(--status-sucesso)";
-                    batteryDesc.innerText = "Fase avançada de homologação, simulados e Go Live.";
+                    batteryDesc.innerText = "Fase avançada de homologação, treinamentos e Go Live.";
                     greenLight.classList.add("active");
                     healthLogo.classList.add("health-green");
                     healthLabel.innerText = "Saúde: Excelente";
@@ -1075,10 +1085,10 @@
 
             const chart = document.getElementById("volumetria-chart");
             chart.style.background = `conic-gradient(
-                var(--status-sucesso) 0% 72.2%, 
-                var(--azul-brand) 72.2% 77.8%, 
-                var(--status-alerta) 77.8% 88.9%, 
-                var(--status-erro) 88.9% 100%
+                var(--status-sucesso) 0% 88.6%, 
+                var(--azul-brand) 88.6% 95.7%, 
+                var(--status-alerta) 95.7% 98.6%, 
+                var(--status-erro) 98.6% 100%
             )`;
         });
     </script>
